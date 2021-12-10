@@ -32,10 +32,10 @@ public class Ellipse {
        System.out.println("Start point: ");
        startPoint.initialize();
        
-       System.out.println("Enter a: ");
+       System.out.print("Enter a: ");
        a = Utils.INPUT.nextDouble();
 
-       System.out.println("Eneter b: ");
+       System.out.print("Eneter b: ");
        b = Utils.INPUT.nextDouble();
 
      } while (!isValid());
@@ -54,10 +54,10 @@ public class Ellipse {
    }
 
    public String toString() {
-     return String.format("%s - [%s, %s], %s, P = %s, A = %s", startPoint, a, b, getType(), calculatePerimeter(), calculateArea());
+     return String.format("%s-[%s, %s], %s, P=%s, A=%s", startPoint, a, b, getType(), calculatePerimeter(), calculateArea());
    }
 
-   public boolean equals(Ellipse otherEllipse) {
+   public boolean equal(Ellipse otherEllipse) {
      boolean sameA = Utils.equals(a, otherEllipse.a);
      boolean sameB = Utils.equals(b, otherEllipse.b);
      boolean sameAReversed = Utils.equals(a, otherEllipse.b);
